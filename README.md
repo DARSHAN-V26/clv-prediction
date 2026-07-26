@@ -34,16 +34,18 @@ The full 11-iteration experiment log — including architecture changes, a check
 - **Multi-seed evaluation** for the neural network, after discovering single-run results can be misleading due to random weight initialization
 - **Precomputed predictions** for deployment, avoiding repeated native-library (LightGBM) calls inside the web app's request cycle
 
-## Deployment
-An interactive dashboard (built with Gradio) lets you select any customer and view their order history, predicted vs. actual 90-day spend, and prediction error.
+## Demo
+An interactive dashboard (built with Gradio) lets you select any customer and view their order history, predicted vs. actual 90-day spend, and prediction error. Currently runs locally (see below) — no hosted public link at this time.
 
+**Run locally:**
 ```bash
 pip install -r requirements.txt
 python app/app_gradio.py
 ```
+This starts a local server (typically `http://127.0.0.1:7860`) — open that URL in your browser.
 
 ## Tech Stack
-Python, pandas, numpy, scikit-learn, LightGBM, PyTorch, Gradio
+Python, pandas, numpy, scikit-learn, LightGBM, PyTorch (LSTM), Gradio
 
 ## Project Structure
 ```
